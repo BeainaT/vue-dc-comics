@@ -15,7 +15,7 @@
 
 <script>
 export default {
-    name: "baseHeader",
+    name: "BaseHeader",
     data() {
         return {
             links: [
@@ -72,7 +72,6 @@ export default {
     }
     .header {
         padding: var(--s);
-        &__nav {
            ul {
                display: flex;
                list-style: none;
@@ -85,6 +84,5 @@ export default {
                    }
                }
            }
-        }
     }
 </style>
