@@ -2,26 +2,25 @@
   <div id="app">
     <BaseHeader/>
     <BaseMain/>
-    <BaseFooterTop/>
+    <BaseFooter/>
   </div>
 </template>
 
 <script>
 import BaseHeader from "./components/BaseHeader.vue";
 import BaseMain from "./components/BaseMain.vue";
-import BaseFooterTop from "./components/footer/BaseFooterTop.vue";
+import BaseFooter from "./components/BaseFooter.vue";
 
 export default {
   name: 'App',
   components: {
     BaseHeader,
     BaseMain,
-    BaseFooterTop,
+    BaseFooter,
 }
 }
 </script>
 
 <style lang="scss">
 @import "./assets/style/global.scss";
-
 </style>

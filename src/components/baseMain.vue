@@ -1,6 +1,6 @@
 <template>
   <main>
-      <div class="container">
+      <div class="container py-5">
           <h1> --> Content goes here </h1>
       </div>
   </main>
@@ -16,6 +16,5 @@ export default {
     main {
         background-color: var(--main_bg_color);
         color: var(--secondary_color);
-        padding: var(--lg);
     }
 </style>

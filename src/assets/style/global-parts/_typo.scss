@@ -1,6 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
+
+#app,
 body {
-    font-family: sans-serif; //debug
+    font-family: 'Roboto Condensed', sans-serif;
 }
-a {
+ul li a {
     text-decoration: none;
+    text-transform: uppercase;
+}
+h3 {
+    margin: var(--s) 0;
+    color: var(--secondary_color);
+    text-transform: uppercase;
+}
+ul {
+    list-style: none;
+}
+.btn_custom {
+    text-transform: uppercase;
+}
+img.locator {
+    transform: scale(0.8);
 }
