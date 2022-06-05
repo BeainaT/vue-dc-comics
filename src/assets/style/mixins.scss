@@ -1,0 +1,10 @@
+@mixin flex($spaces: '') {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    @if ($spaces == 'around') {
+        justify-content: space-around;
+    } @else if ($spaces == 'between') {
+        justify-content: space-between;
+    }
+}

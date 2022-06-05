@@ -1,25 +1,12 @@
 <template>
   <div class="top">
     <div class="container py-4">
-      <div class="f__nav">
-        <ul class="p-0 m-0">
-          <li>
-            <a href="#"><img src="../../assets/img/buy-comics-digital-comics.png" alt="" />digital comics</a>
-          </li>
-          <li>
-            <a href="#"><img src="../../assets/img/buy-comics-merchandise.png" alt="" />dc merchandise</a>
-          </li>
-          <li>
-            <a href="#"><img src="../../assets/img/buy-comics-subscriptions.png" alt="" />subscription</a>
-          </li>
-          <li>
-            <a href="#"><img class="locator" src="../../assets/img/buy-comics-shop-locator.png" alt="" />comic shop locator</a>
-          </li>
-          <li>
-            <a href="#"><img src="../../assets/img/buy-dc-power-visa.svg" alt="" />dc power visa</a>
-          </li>
-        </ul>
-      </div>
+      <ul class="p-0 m-0">
+        <li v-for="(link, index) in links" :key="index">
+          <a :href="link.url"
+            ><img :src="link.img" :alt="link.title" />{{link.text}}</a>
+        </li>
+      </ul>
     </div>
   </div>
 </template>
@@ -27,35 +14,61 @@
 <script>
 export default {
   name: "BaseFooterTop",
+  data() {
+    return {
+      links: [
+        {
+          img: require("../../assets/img/buy-comics-digital-comics.png"),
+          text: "digital comics",
+          title: "screen with logo",
+        },
+        {
+          img: require("../../assets/img/buy-comics-merchandise.png"),
+          text: "dc merchandise",
+          title: "t-shirt",
+        },
+        {
+          img: require("../../assets/img/buy-comics-subscriptions.png"),
+          text: "subscription",
+          title: "cards",
+        },
+        {
+          img: require("../../assets/img/buy-comics-shop-locator.png"),
+          text: "comic shop locator",
+          title: "locator icon",
+        },
+        {
+          img: require("../../assets/img/buy-dc-power-visa.svg"),
+          text: "dc power visa",
+          title: "shop card",
+        },
+      ],
+    };
+  },
 };
 </script>
 
 <style lang="scss" scoped>
+@import "../../assets/style/mixins.scss";
+
 .top {
   background-color: var(--primary_color);
   color: var(--secondary_color);
 
-  .container {
-    justify-content: center;
+  ul {
+    @include flex("around");
 
-    ul {
-      display: flex;
-      align-items: center;
-      flex-wrap: wrap;
-      justify-content: space-around;
+    li {
+      padding: var(--s);
 
-      li {
-        padding: var(--s);
+      a {
+        @include flex;
+        gap: var(--s);
+        color: var(--secondary_color);
 
-        a {
-          display: flex;
-          align-items: center;
-          gap: var(--s);
-          color: var(--secondary_color);
-
-          img {
-            width: var(--lg);
-          }
+        img {
+          max-width: var(--lg);
+          height: var(--lg);
         }
       }
     }
