@@ -1,6 +1,6 @@
 <template>
     <div class="card_box">
-        <img :src="img" alt="">
+        <img :src="img" :alt="title">
         <h3>{{title}}</h3> 
     </div>
 </template>

@@ -96,7 +96,6 @@ export default {
             ],
         };
     },
-    components: { CurrentCards }
 };
 </script>
 
