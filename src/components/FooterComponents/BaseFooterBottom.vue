@@ -62,8 +62,7 @@ export default {
     @include flex("between");
     .btn_custom {
       border: 0.125rem solid var(--primary_color);
-      border-radius: 0;
-      color: var(--secondary_color);
+      background-color: inherit;
       &:hover {
         background-color: var(--primary_color);
         transition: 0.3s linear;

@@ -16,6 +16,9 @@ h3 {
 ul {
     list-style: none;
 }
-.btn_custom {
+.btn.btn_custom {
     text-transform: uppercase;
+    background-color: var(--primary_color);
+    color: var(--secondary_color);
+    border-radius: 0;
 }

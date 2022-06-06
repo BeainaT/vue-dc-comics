@@ -1,6 +1,7 @@
 <template>
     <div class="main_cards">
         <div class="container pt-5 pb-3">
+            <MainCurrentButton />
             <ul class="p-0 m-0">
                 <li v-for="(card, index) in cards" :key="index">
                     <CurrentCards :img="card.thumb" :title="card.series" />
@@ -14,12 +15,14 @@
 <script>
 import CurrentCards from './CardComponents/CurrentCards.vue';
 import MainButton from './MainButton.vue';
+import MainCurrentButton from './MainCurrentButton.vue';
 
 export default {
     name: "MainCards",
     components: {
         CurrentCards,
         MainButton,
+        MainCurrentButton,
     },
     data() {
         return {
@@ -108,6 +111,8 @@ export default {
     .main_cards {
         background-color: var(--main_bg_color);
         text-align: center;
+        .container {
+            position: relative;
 
             ul {
                 display: flex;
@@ -118,6 +123,6 @@ export default {
                     text-align: justify;
                 }
             }
-
         }
+    }
 </style>
