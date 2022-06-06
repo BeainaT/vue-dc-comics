@@ -1,20 +1,21 @@
 <template>
   <main>
-    <div class="container py-5">
-      <h1>--> Content goes here</h1>
-    </div>
+    <MainHero />
   </main>
 </template>
 
 <script>
+import MainHero from "./MainComponents/MainHero.vue";
 export default {
   name: "BaseMain",
+  components: {
+    MainHero,
+  },
 };
 </script>
 
 <style lang="scss" scoped>
-main {
-  background-color: var(--main_bg_color);
-  color: var(--secondary_color);
-}
+  main {
+    width: 100%;
+  }
 </style>

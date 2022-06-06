@@ -1,25 +1,24 @@
 <template>
-    <footer>
-      <BaseFooterTop/>
-      <BaseFooterNav/>
-      <BaseFooterBottom/>
-    </footer>
+  <footer>
+    <BaseFooterTop />
+    <BaseFooterNav />
+    <BaseFooterBottom />
+  </footer>
 </template>
 
 <script>
-import BaseFooterNav from './FooterComponents/BaseFooterNav.vue';
-import BaseFooterTop from './FooterComponents/BaseFooterTop.vue';
-import BaseFooterBottom from './FooterComponents/BaseFooterBottom.vue';
+import BaseFooterNav from "./FooterComponents/BaseFooterNav.vue";
+import BaseFooterTop from "./FooterComponents/BaseFooterTop.vue";
+import BaseFooterBottom from "./FooterComponents/BaseFooterBottom.vue";
 export default {
-    name: "BaseFooter",
-    components: {
+  name: "BaseFooter",
+  components: {
     BaseFooterNav,
     BaseFooterTop,
-    BaseFooterBottom
-}
-}
+    BaseFooterBottom,
+  },
+};
 </script>
 
 <style lang="scss" scoped>
-    
 </style>
