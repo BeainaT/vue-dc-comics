@@ -1,22 +1,25 @@
 <template>
     <div class="main_cards">
-        <div class="container py-5">
+        <div class="container pt-5 pb-3">
             <ul class="p-0 m-0">
                 <li v-for="(card, index) in cards" :key="index">
                     <CurrentCards :img="card.thumb" :title="card.series" />
                 </li>
             </ul>
         </div>
+        <MainButton />
     </div>
 </template>
 
 <script>
 import CurrentCards from './CardComponents/CurrentCards.vue';
+import MainButton from './MainButton.vue';
 
 export default {
     name: "MainCards",
     components: {
         CurrentCards,
+        MainButton,
     },
     data() {
         return {
@@ -104,17 +107,17 @@ export default {
 
     .main_cards {
         background-color: var(--main_bg_color);
-        // .container {
-        //     display: flex;
+        text-align: center;
+
             ul {
                 display: flex;
                 flex-wrap: wrap;
                 gap: var(--s-m);
                 li {
                     width: calc(100% / 6 - var(--s-m));
+                    text-align: justify;
                 }
             }
 
         }
-    // }
 </style>

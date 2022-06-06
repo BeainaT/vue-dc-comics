@@ -12,8 +12,8 @@ export default {
   name: "BaseMain",
   components: {
     MainHero,
-    MainCards
-  },
+    MainCards,
+},
 };
 </script>
 

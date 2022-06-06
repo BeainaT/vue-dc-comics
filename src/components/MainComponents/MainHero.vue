@@ -11,7 +11,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    img {
-        width: 100%;
+    .box_jumbotron {
+        height: 18.75rem;
+        overflow: hidden;
+        img {
+            width: 100%;
+        }
     }
 </style>
