@@ -1,7 +1,7 @@
 <template>
     <div class="card_box">
         <img :src="img" :alt="title">
-        <h3>{{title}}</h3> 
+        <h6>{{title}}</h6>
     </div>
 </template>
 
@@ -15,6 +15,15 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
+
+    img {
+        width: 100%;
+    }
+    h6 {
+        text-transform: uppercase;
+        color: var(--secondary_color);
+        margin: var(--s) 0;
+    }
 
 </style>

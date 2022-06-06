@@ -1,7 +1,7 @@
 <template>
     <div class="main_cards">
-        <div class="container">
-            <ul>
+        <div class="container py-5">
+            <ul class="p-0 m-0">
                 <li v-for="(card, index) in cards" :key="index">
                     <CurrentCards :img="card.thumb" :title="card.series" />
                 </li>
@@ -100,7 +100,21 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../../assets/style/mixins.scss';
+
     .main_cards {
         background-color: var(--main_bg_color);
-    }
+        // .container {
+        //     display: flex;
+            ul {
+                display: flex;
+                flex-wrap: wrap;
+                gap: var(--s-m);
+                li {
+                    width: calc(100% / 6 - var(--s-m));
+                }
+            }
+
+        }
+    // }
 </style>
