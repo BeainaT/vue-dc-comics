@@ -7,7 +7,7 @@
       <div class="header__nav">
         <ul class="p-0 m-0">
           <li v-for="(link, index) in links" :key="index">
-            <a :href="link.url">{{ link.text }}</a>
+            <a :class="{active : link.isActive}" :href="link.url" @mouseover="activeLink(link)" @mouseleave="activeLink(link)">{{ link.text }}</a>
           </li>
         </ul>
       </div>
@@ -24,46 +24,62 @@ export default {
         {
           text: "characters",
           url: "#",
+          isActive: false,
         },
         {
           text: "comics",
           url: "#",
+          isActive: false,
         },
         {
           text: "movies",
           url: "#",
+          isActive: false,
         },
         {
           text: "tv",
           url: "#",
+          isActive: false,
         },
         {
           text: "games",
           url: "#",
+          isActive: false,
         },
         {
           text: "collectibles",
           url: "#",
+          isActive: false,
         },
         {
           text: "videos",
           url: "#",
+          isActive: false,
         },
         {
           text: "fans",
           url: "#",
+          isActive: false,
         },
         {
           text: "news",
           url: "#",
+          isActive: false,
         },
         {
           text: "shop",
           url: "#",
+          isActive: false,
         },
       ],
-    };
+      
+    }
   },
+  methods: {
+    activeLink(obj) {
+      obj.isActive = !obj.isActive;
+    }
+  }
 };
 </script>
 
@@ -85,7 +101,7 @@ export default {
         color: var(--header_link);
         font-weight: bold;
 
-        &:hover {
+        &.active {
           color: var(--primary_color);
 
           &::after {

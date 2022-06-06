@@ -63,7 +63,7 @@ export default {
 
       a {
         @include flex;
-        gap: var(--s);
+        @extend li;
         color: var(--secondary_color);
 
         img {
