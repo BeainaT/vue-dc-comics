@@ -1,7 +1,7 @@
 <template>
-    <div class="box_jumbotron">
+    <section class="box_jumbotron">
         <img src="../../assets/img/jumbotron.jpg" alt="hero img">
-    </div>
+    </section>
 </template>
 
 <script>

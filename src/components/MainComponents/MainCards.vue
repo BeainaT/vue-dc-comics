@@ -1,15 +1,15 @@
 <template>
-    <div class="main_cards">
+    <section class="main_cards">
         <div class="container pt-5 pb-3">
             <MainCurrentButton />
-            <ul class="p-0 m-0">
+            <ul class="p-0 m-0 gap-3">
                 <li v-for="(card, index) in cards" :key="index">
                     <CurrentCards :img="card.thumb" :title="card.series" />
                 </li>
             </ul>
         </div>
         <MainButton />
-    </div>
+    </section>
 </template>
 
 <script>
@@ -117,12 +117,9 @@ export default {
             ul {
                 display: flex;
                 flex-wrap: wrap;
-                gap: var(--s-m);
-                li {
-                    width: calc(100% / 6 - var(--s-m));
-                    text-align: justify;
-                }
+                justify-content: center;
             }
+
         }
-    }
+}
 </style>

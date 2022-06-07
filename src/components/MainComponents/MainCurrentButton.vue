@@ -14,8 +14,10 @@ export default {
 <style lang="scss" scoped>
 .btn_custom {
     position: absolute;
-    top: -0.625rem;
+    width: 200px;
+    top: -1.5625rem;
     left: 0;
+    font-size: var(--s-m);
 }
 
 </style>
